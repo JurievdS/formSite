@@ -1,12 +1,12 @@
 const Router = require("express").Router();
-const upload = require("../../middleware/gridfsMiddleware");
-const addPart = require("../../controllers/partController");
+const authRouter = require("./authRoutes")
 const userRouter = require("./usersRoutes")
 
 Router.get("/test", (req, res) => {
   res.json({ msg: "Ping API test" });
 });
 
+Router.use("/auth", authRouter)
 Router.use("/user", userRouter)
 
 
