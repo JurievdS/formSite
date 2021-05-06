@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const morgan = require("morgan");
 const api = require("./src/routes/api")
-const { notFound,errorHandler} = require("./src/middleware/errorMiddleware")
 
 // Environment variables
 const { PORT, MONGO_URI } = require("./src/config/config");
